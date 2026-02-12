@@ -49,7 +49,7 @@ torchaudio = [
   { index = "pytorch-cu130", extra = "cu130" },
 ]
 lietorch = { path = "./thirdparty/lietorch" }
-torch_scatter = { path = "./thirdparty/pytorch_scatter" }
+torch-scatter = { path = "./thirdparty/pytorch_scatter" }
 
 [[tool.uv.index]]
 name = "pytorch-cu128"
@@ -62,10 +62,10 @@ url = "https://download.pytorch.org/whl/cu130"
 explicit = true
 
 [[tool.uv.dependency-metadata]]
-name = "torch_scatter"
+name = "torch-scatter"
 requires-dist = ["torch"]
 
 [tool.uv.extra-build-dependencies]
 droid-slam = [{ requirement = "torch", match-runtime = true }]
 lietorch = [{ requirement = "torch", match-runtime = true }]
-torch_scatter = [{ requirement = "torch", match-runtime = true }]
+torch-scatter = [{ requirement = "torch", match-runtime = true }]
