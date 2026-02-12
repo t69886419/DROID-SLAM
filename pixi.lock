@@ -5015,8 +5015,12 @@ packages:
   timestamp: 1727963148474
 - pypi: ./thirdparty/lietorch
   name: lietorch
-  version: '0.2'
-  sha256: 1bd1e687cbe47adbbde80ea5a0bcd44799f28edfc564ef2dcd7a758f46fa95d2
+  version: '0.3'
+  sha256: 76a57fde4e0a0969d8e7a21f08bab2e898f26285d19699242a96ccfb885edebd
+  requires_dist:
+  - torch
+  - numpy
+  requires_python: '>=3.9'
 - conda: https://conda.anaconda.org/conda-forge/linux-64/llvm-openmp-21.1.8-h4922eb0_0.conda
   sha256: a5a7ad16eecbe35cac63e529ea9c261bef4ccdd68cb1db247409f04529423989
   md5: f8640b709b37dc7758ddce45ea18d000
