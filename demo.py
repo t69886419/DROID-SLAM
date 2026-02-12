@@ -1,5 +1,4 @@
 import sys
-sys.path.append('droid_slam')
 
 from tqdm import tqdm
 import numpy as np
@@ -12,8 +11,8 @@ import time
 import argparse
 
 from torch.multiprocessing import Process
-from droid import Droid
-from droid_async import DroidAsync
+from droid_slam.droid import Droid
+from droid_slam.droid_async import DroidAsync
 
 import torch.nn.functional as F
 

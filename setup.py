@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 from torch.utils.cpp_extension import BuildExtension, CUDAExtension
 
 import os.path as osp
@@ -6,6 +6,7 @@ ROOT = osp.dirname(osp.abspath(__file__))
 
 setup(
     name='droid_backends',
+    packages=find_packages(),
     ext_modules=[
         CUDAExtension('droid_backends',
             include_dirs=[osp.join(ROOT, 'thirdparty/lietorch/eigen')],
