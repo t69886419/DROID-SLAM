@@ -17,12 +17,6 @@ conflicts = [[
     { package = "droid-slam", extra = "cu130" },
 ]]
 
-[manifest]
-
-[[manifest.dependency-metadata]]
-name = "torch-scatter"
-requires-dist = ["torch"]
-
 [[package]]
 name = "absl-py"
 version = "2.4.0"

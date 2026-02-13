@@ -21,6 +21,11 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project.optional-dependencies]
+cu = [
+  "torch>=2.10.0,<3",
+  "torchvision>=0.25.0,<0.26",
+  "torchaudio>=2.10.0,<3",
+]
 cu128 = [
   "torch>=2.10.0,<3",
   "torchvision>=0.25.0,<0.26",
@@ -33,6 +38,7 @@ cu130 = [
 ]
 
 [tool.uv]
+no-build-isolation = true
 conflicts = [[{ extra = "cu128" }, { extra = "cu130" }]]
 
 [tool.uv.sources]
@@ -60,12 +66,3 @@ explicit = true
 name = "pytorch-cu130"
 url = "https://download.pytorch.org/whl/cu130"
 explicit = true
-
-[[tool.uv.dependency-metadata]]
-name = "torch-scatter"
-requires-dist = ["torch"]
-
-[tool.uv.extra-build-dependencies]
-droid-slam = [{ requirement = "torch", match-runtime = true }]
-lietorch = [{ requirement = "torch", match-runtime = true }]
-torch-scatter = [{ requirement = "torch", match-runtime = true }]
